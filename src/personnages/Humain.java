@@ -20,31 +20,32 @@ public class Humain {
 	}
 	
 	public void direBonjour() {
-		System.out.println("Bonjour ! Je m'appelle " + nom + " et j'aime boire du " + this.boisson);
+		System.out.println("-Bonjour ! Je m'appelle " + nom + " et j'aime boire du " + this.boisson);
 	}
 	
 	public void boire() {
-		System.out.println("Mmmm, un bon verre de " + this.boisson + " ! GLOUPS !");
+		System.out.println("-Mmmm, un bon verre de " + this.boisson + " ! GLOUPS !");
 	}
 	
 	public void acheter(String bien, int prix) {
-		bien= boisson;
-		prix;
+		if (argent >= prix) {
+			parler("J'ai " + this.argent +" en poche. Je vais pouvoir m'offrir " + bien + " à " + prix + " sous");
+			perdreArgent(prix);
+		} else {
+			parler("Je n'ai plus que " + this.argent + " sous en poche. Je ne peux même pas m'offrir " + bien+ " à 50 sous");
+		}
 	}
 	
 	public void gagnerArgent(int gain) {
-		argent+=gain;
+		this.argent+=gain;
 	}
 	
 	public void perdreArgent(int perte) {
-		argent -=perte;
+		this.argent -=perte;
 	}
 
-	private String dialogue() {
-		String texte = "L'humain " + nom + ":";
-		return texte;
-	}
+
 	public void parler(String texte) {
-		System.out.println(dialogue() + "« " + texte + "»");
+		System.out.println( "- " + texte + "");
 		}
 }
