@@ -7,7 +7,7 @@ public class Humain {
 		this.boisson = boisson;
 		this.argent = argent;
 	}
-	private String nom;
+	protected String nom;
 	private String boisson;
 	protected int argent;
 	
@@ -38,7 +38,7 @@ public class Humain {
 	
 	public void gagnerArgent(int gain) {
 		this.argent+=gain;
-		parler(this.argent + " sous! Je te remercie généreux donateur!");
+		//parler(this.argent + " sous! Je te remercie généreux donateur!");
 	}
 	
 	public void perdreArgent(int perte) {
