@@ -38,6 +38,8 @@ public class HistoireTP4 {
 		roro.donner(marco);
 		System.out.println("---------------------------------------------------------------------------------------");
 		
+		roro.provoquer(yaku);
+		
 
 	}
 
