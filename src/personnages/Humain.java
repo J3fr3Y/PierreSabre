@@ -9,7 +9,7 @@ public class Humain {
 	}
 	private String nom;
 	private String boisson;
-	private int argent;
+	protected int argent;
 	
 	public String getNom() {
 		return nom;
@@ -38,6 +38,7 @@ public class Humain {
 	
 	public void gagnerArgent(int gain) {
 		this.argent+=gain;
+		parler(this.argent + " sous! Je te remercie généreux donateur!");
 	}
 	
 	public void perdreArgent(int perte) {
@@ -46,6 +47,6 @@ public class Humain {
 
 
 	public void parler(String texte) {
-		System.out.println( "- " + texte + "");
+		System.out.println( "-" + texte + "");
 		}
 }
