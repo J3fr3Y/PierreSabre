@@ -1,11 +1,11 @@
 package personnages;
 
-import personnages.Commercant;
-import personnages.Humain;
+//import personnages.Commercant;
+//import personnages.Humain;
 
 public class Yakuza extends Humain {
 	private String clan;
-	private int reputation;
+	private int reputation=0;
 
 	public Yakuza(String nom, String boisson, int argent, String clan) {
 		super(nom, boisson, argent);
@@ -18,6 +18,7 @@ public class Yakuza extends Humain {
 		victime.seFaireExtorquer();
 		gagnerArgent(victime.argent);
 		parler("J'ai piqué les "+ victime.argent + " sous de " + victime.nom + ", ce qui me fait " + this.argent + " sous dans ma poche. Hi ! Hi !");
+		this.reputation+=1;
 	}
 
 }
